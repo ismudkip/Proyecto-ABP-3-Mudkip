@@ -1,0 +1,149 @@
+@use '../abstracts/mixins' as m;
+
+%box {
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    -webkit-box-shadow: 3px 7px 6px 0px rgba(0, 0, 0, 0.39);
+    box-shadow: 3px 7px 6px 0px rgba(0, 0, 0, 0.39);
+}
+
+.box-profile {
+    @extend %box;
+
+    &--dark {
+        @include m.box-dark;
+    }
+
+    &__avatar {
+        vertical-align: middle;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+
+        @media screen and (min-width: 768px) {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+
+    &__icon {
+        color: black;
+    }
+
+    &__container {
+        @include m.flex-center;
+    }
+
+
+}
+
+
+
+//ESTILOS COMPONETE box-balance
+
+.box-balance {
+    @extend %box;
+
+
+    &__title {
+        color: grey;
+        font-size: 1rem;
+    }
+
+    &__amount {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    &__container-details {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.75rem;
+        font-weight: 600;
+    }
+
+    &__profit-value {
+        color: grey;
+    }
+
+    &__percent-value {
+        color: blue;
+
+        &--profit {
+            color: green;
+        }
+
+        &--loss {
+            color: red;
+        }
+    }
+}
+
+.box-otion {
+    @extend %box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.125rem;
+
+    &__text {
+        margin: 0px;
+        font-size: 1rem;
+    }
+}
+
+.box-token {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__price {
+        font-size: 1.5rem;
+        font-weight: 600;
+
+    }
+
+    &__percent {
+        font-size: 1.25rem;
+        font-weight: 600;
+
+    }
+
+    &__container-details {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.75rem;
+        font-weight: 600;
+    }
+}
+
+.box-transaction {
+    @extend %box;
+
+
+    &__title {
+        color: grey;
+        font-size: 1rem;
+    }
+
+    &__amount {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    &__container-details {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.75rem;
+        font-weight: 600;
+    }
+
+}

@@ -1,0 +1,13 @@
+.container-tokens {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+
+    &__element {
+        height: 200px;
+        background-color: aqua;
+        border: 1px solid black;
+    }
+}

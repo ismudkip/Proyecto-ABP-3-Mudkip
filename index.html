@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartBudget Wallet | Dashboard</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./assets/css/improvements.css">
+
+    <script defer src="./assets/js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="d-flex justify-content-between align-items-center py-4">
+            <div>
+                <h1>Banco SmartBudget</h1>
+            </div>
+            <div>
+                <button class="btn-circle">
+                    <i class="bi bi-plus"></i>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <section class="mb-4">
+                <div class="box-profile d-flex justify-content-between">
+                    <div class="d-flex align-items-center gap-5">
+                        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar"
+                            class="box-profile__avatar">
+                        <div>
+                            <h4 class="mb-0 fs-6"> Mi billetera </h4>
+                            <p class="mb-0 text-secondary small">  Miembro Pro</p>
+                        </div>
+                    </div>
+                    <div class="box-profile__container">
+                        <i class="bi bi-caret-down-fill box-profile__icon"></i>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-4">
+                <div class="box-balance">
+                    <h2 class="box-balance__title">Total Balance</h2>
+                    <p class="box-balance__amount">$ 4.600 USD</p>
+                    <div class="box-balance__container-details">
+                        <span class="box-balance__profit-value">+ $ 330 USD</span>
+                        <span class="box-balance__percent-value">+ 3%</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="actions-grid">
+                <div class="box-option">
+                    <i class="bi bi-send box-option__icon"></i>
+                    <p class="box-option__text">Enviar</p>
+                </div>
+                <div class="box-option">
+                    <i class="bi bi-download box-option__icon"></i>
+                    <p class="box-option__text">Recibido</p>
+                </div>
+                <div class="box-option">
+                    <i class="bi bi-wallet2 box-option__icon"></i>
+                    <p class="box-option__text">Cartola</p>
+                </div>
+            </section>
+
+            <section class="transactions-section">
+                <div class="transactions-section__title">
+                    Transacciones recientes
+                    <span>Ver Todo</span>
+                </div>
+
+                <div class="transaction-item">
+                    <div class="transaction-item__left">
+                        <div class="transaction-item__icon-box">
+                            <i class="bi bi-apple"></i>
+                        </div>
+                        <div class="transaction-item__info">
+                            <h4>Apple Games</h4>
+                            <p>Jan 27, 2026 • 11:32 AM</p>
+                        </div>
+                    </div>
+                    <div class="transaction-item__right transaction-item__right--negative">
+                        <h4>-$ 103 USD</h4>
+                    </div>
+                </div>
+
+                <div class="transaction-item">
+                    <div class="transaction-item__left">
+                        <div class="transaction-item__icon-box">
+                            <i class="bi bi-spotify"></i>
+                        </div>
+                        <div class="transaction-item__info">
+                            <h4>Spotify</h4>
+                            <p>Jan 26, 2026 • 10:15 PM</p>
+                        </div>
+                    </div>
+                    <div class="transaction-item__right transaction-item__right--negative">
+                        <h4>-$ 5.99 USD</h4>
+                    </div>
+                </div>
+
+                <div class="transaction-item">
+                    <div class="transaction-item__left">
+                        <div class="transaction-item__icon-box">
+                            <i class="bi bi-arrow-down-left"></i>
+                        </div>
+                        <div class="transaction-item__info">
+                            <h4>Tnsferencia Recibida</h4>
+                            <p>Jan 23, 2026 • 13:30 PM</p>
+                        </div>
+                    </div>
+                    <div class="transaction-item__right transaction-item__right--positive">
+                        <h4>+$ 600 USD</h4>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

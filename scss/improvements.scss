@@ -1,0 +1,283 @@
+// Custom Design System for Revamp
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    --bg-dark: #0f172a;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent-success: #22c55e;
+    --accent-error: #ef4444;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+// Glassmorphism Utility
+.glass {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+}
+
+// Header refinements
+header {
+    margin-bottom: 1.5rem;
+
+    h1 {
+        font-weight: 700;
+        font-size: 1.75rem;
+        background: var(--primary-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.btn-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: var(--primary-gradient);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+    }
+}
+
+// Profile Section
+.box-profile {
+    padding: 0.5rem;
+    background: var(--card-bg);
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+    align-items: center;
+
+    &__avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        object-fit: cover;
+    }
+
+    &__icon {
+        color: var(--text-secondary);
+        font-size: 0.8rem;
+    }
+}
+
+// Balance Card
+.box-balance {
+    padding: 2rem;
+    background: var(--primary-gradient);
+    border-radius: 32px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 150px;
+        height: 150px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+    }
+
+    &__title {
+        font-size: 1rem;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 0.5rem;
+    }
+
+    &__amount {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    &__container-details {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+    }
+
+    &__profit-value {
+        font-weight: 500;
+    }
+
+    &__percent-value {
+        padding: 0.25rem 0.75rem;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 100px;
+        font-size: 0.875rem;
+    }
+}
+
+// Action Buttons Grid
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.box-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-4px);
+        border-color: rgba(168, 85, 247, 0.3);
+    }
+
+    &__text {
+        font-size: 0.875rem;
+        font-weight: 500;
+        margin: 0;
+        color: var(--text-secondary);
+    }
+
+    &__icon {
+        font-size: 1.25rem;
+        color: var(--text-primary);
+    }
+}
+
+// Recent Transactions
+.transactions-section {
+    margin-top: 2.5rem;
+
+    &__title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+            font-size: 0.875rem;
+            color: var(--accent-success);
+            cursor: pointer;
+        }
+    }
+}
+
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    margin-bottom: 0.75rem;
+
+    &__left {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    &__icon-box {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.05);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+    }
+
+    &__info {
+        h4 {
+            font-size: 1rem;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+    }
+
+    &__right {
+        text-align: right;
+
+        h4 {
+            font-size: 1rem;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        &--positive {
+            color: var(--accent-success);
+        }
+
+        &--negative {
+            color: var(--accent-error);
+        }
+    }
+}
+
+// Utilities
+.d-none {
+    display: none !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.justify-content-between {
+    justify-content: space-between !important;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+.py-3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
